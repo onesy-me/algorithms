@@ -1,6 +1,6 @@
 {
   "name": "@onesy/algorithms",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Algorithms",
   "repository": "https://github.com/onesy-org/onesy-algorithms.git",
   "author": "Lazar <lazareric2@gmail.com>",
@@ -35,6 +35,7 @@
     "prebuild": "rimraf build",
     "build": "node utils/js/build.js",
     "release": "yarn build && yarn version --patch --no-git-tag-version && yarn build && cd ./build && npm publish",
+    "release-pure": "yarn build && yarn build && cd ./build && npm publish",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "type": "tsc --noEmit -p tsconfig.json",
     "cov": "cross-env NODE_ENV=test onesy-test",
@@ -43,12 +44,12 @@
     "test": "yarn lint && yarn type && yarn build && yarn test:pre && yarn cov && yarn test:post"
   },
   "dependencies": {
-    "@onesy/utils": "^1.0.11445",
+    "@onesy/utils": "^1.0.0",
     "@babel/runtime": "^7.18.3"
   },
   "devDependencies": {
-    "@onesy/models": "^1.0.1111",
-    "@onesy/test": "^1.0.11150",
+    "@onesy/models": "^1.0.0",
+    "@onesy/test": "^1.0.0",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
