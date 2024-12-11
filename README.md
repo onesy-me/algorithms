@@ -4,11 +4,11 @@
 
 <p align='center'>
   <a target='_blank' rel='noopener noreferrer' href='#'>
-    <img src='utils/images/logo.svg' alt='amaui logo' />
+    <img src='utils/images/logo.svg' alt='onesy logo' />
   </a>
 </p>
 
-<h1 align='center'>amaui Algorithms</h1>
+<h1 align='center'>onesy Algorithms</h1>
 
 <p align='center'>
   Algorithms
@@ -39,7 +39,7 @@
 ### Add
 
 ```sh
-yarn add @amaui/algorithms
+yarn add @onesy/algorithms
 ```
 
 ### Algorithms
@@ -60,7 +60,7 @@ yarn add @amaui/algorithms
 ### Use
 
 ```javascript
-  import { bubbleSort } from '@amaui/algorithms';
+  import { bubbleSort } from '@onesy/algorithms';
 
   const value = [1, 14, 7, 4];
 

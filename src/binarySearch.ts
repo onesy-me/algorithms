@@ -1,5 +1,5 @@
-import { is } from '@amaui/utils';
-import { TMethod } from '@amaui/models';
+import { is } from '@onesy/utils';
+import { TMethod } from '@onesy/models';
 
 export interface IBinarySearchOptions {
   sort?: boolean;

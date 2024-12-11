@@ -1,17 +1,17 @@
 /* tslint:disable: no-shadowed-variable */
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import * as AmauiAlgorithms from '../src';
+import * as OnesyAlgorithms from '../src';
 
-group('@amaui/algorithms/naiveSearch', () => {
+group('@onesy/algorithms/naiveSearch', () => {
 
   to('naiveSearch', async () => {
     const valueBrowsers = await evaluate((window: any) => {
-      return [window.AmauiAlgorithms.naiveSearch('Lorem ipsum lorem', 'lorem'), window.AmauiAlgorithms.naiveSearch('Lorem ipsum lorem', 'loremipsu')];
+      return [window.OnesyAlgorithms.naiveSearch('Lorem ipsum lorem', 'lorem'), window.OnesyAlgorithms.naiveSearch('Lorem ipsum lorem', 'loremipsu')];
     });
-    const valueNode = [AmauiAlgorithms.naiveSearch('Lorem ipsum lorem', 'lorem'), AmauiAlgorithms.naiveSearch('Lorem ipsum lorem', 'loremipsu')];
+    const valueNode = [OnesyAlgorithms.naiveSearch('Lorem ipsum lorem', 'lorem'), OnesyAlgorithms.naiveSearch('Lorem ipsum lorem', 'loremipsu')];
     const values = [valueNode, ...valueBrowsers];
 
     values.forEach(value => assert(value).eql([true, false]));

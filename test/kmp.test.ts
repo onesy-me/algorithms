@@ -1,17 +1,17 @@
 /* tslint:disable: no-shadowed-variable */
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import * as AmauiAlgorithms from '../src';
+import * as OnesyAlgorithms from '../src';
 
-group('@amaui/algorithms/kmp', () => {
+group('@onesy/algorithms/kmp', () => {
 
   to('kmp', async () => {
     const valueBrowsers = await evaluate((window: any) => {
-      return [window.AmauiAlgorithms.kmp('Lorem ipsum lorem', 'lorem'), window.AmauiAlgorithms.kmp('Lorem ipsum lorem', 'loremipsu')];
+      return [window.OnesyAlgorithms.kmp('Lorem ipsum lorem', 'lorem'), window.OnesyAlgorithms.kmp('Lorem ipsum lorem', 'loremipsu')];
     });
-    const valueNode = [AmauiAlgorithms.kmp('Lorem ipsum lorem', 'lorem'), AmauiAlgorithms.kmp('Lorem ipsum lorem', 'loremipsu')];
+    const valueNode = [OnesyAlgorithms.kmp('Lorem ipsum lorem', 'lorem'), OnesyAlgorithms.kmp('Lorem ipsum lorem', 'loremipsu')];
     const values = [valueNode, ...valueBrowsers];
 
     values.forEach(value => assert(value).eql([true, false]));

@@ -1,17 +1,17 @@
 /* tslint:disable: no-shadowed-variable */
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import * as AmauiAlgorithms from '../src';
+import * as OnesyAlgorithms from '../src';
 
-group('@amaui/algorithms/longestPrefixSuffix', () => {
+group('@onesy/algorithms/longestPrefixSuffix', () => {
 
   to('longestPrefixSuffix', async () => {
     const valueBrowsers = await evaluate((window: any) => {
-      return [window.AmauiAlgorithms.longestPrefixSuffix('asdasuasday')];
+      return [window.OnesyAlgorithms.longestPrefixSuffix('asdasuasday')];
     });
-    const valueNode = [AmauiAlgorithms.longestPrefixSuffix('asdasuasday')];
+    const valueNode = [OnesyAlgorithms.longestPrefixSuffix('asdasuasday')];
     const values = [valueNode, ...valueBrowsers];
 
     values.forEach(value => assert(value).eql([
